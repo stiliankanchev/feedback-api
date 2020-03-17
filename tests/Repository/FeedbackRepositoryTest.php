@@ -14,7 +14,8 @@ class FeedbackRepositoryTest extends KernelTestCase {
 		$this->entityManager = $kernel->getContainer()
 			->get('doctrine')
 			->getManager();
-		$this->entityManager->getConnection()->beginTransaction();
+		// $this->entityManager->getConnection()->beginTransaction();
+		$this->entityManager->getRepository(Feedback::class)->createQueryBuilder('f')->delete()->getQuery()->execute();
 	}
 
 	public function testGetFilteredFeedback() {
@@ -31,7 +32,8 @@ class FeedbackRepositoryTest extends KernelTestCase {
 
 	protected function tearDown(): void {
 		parent::tearDown();
-		$this->entityManager->getConnection()->rollback();
+		$this->entityManager->getRepository(Feedback::class)->createQueryBuilder('f')->delete()->getQuery()->execute();
+		// $this->entityManager->getConnection()->rollback();
 		$this->entityManager->close();
 		$this->entityManager = null;
 	}
