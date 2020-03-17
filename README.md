@@ -16,9 +16,9 @@ Bonus points for unit and integration tests.
 
 # Running the project
 
-Running all services: `docker-compose up --build`
-Running migrations: `docker-compose exec php php bin/console doctrine:migrations:migrate`
-Running tests: `docker-compose exec php php bin/phpunit`
+- Running all services: `docker-compose up --build`
+- Running migrations: `docker-compose exec php php bin/console doctrine:migrations:migrate`
+- Running tests: `docker-compose exec php php bin/phpunit`
 
 # TODO: Improvements
 - proper environments setup. Everything in a single file
@@ -43,13 +43,13 @@ Running tests: `docker-compose exec php php bin/phpunit`
 
 
 # Quick commands
-`php bin/console doctrine:migrations:migrate`
-`php bin/phpunit`
-`symfony server:start`
-`composer require annotations`
-`composer require symfony/orm-pack`
-`composer require --dev symfony/maker-bundle`
-`composer require --dev symfony/phpunit-bridge`
+- `php bin/console doctrine:migrations:migrate`
+- `php bin/phpunit`
+- `symfony server:start`
+- `composer require annotations`
+- `composer require symfony/orm-pack`
+- `composer require --dev symfony/maker-bundle`
+- `composer require --dev symfony/phpunit-bridge`
 
 # Some commands used to provision a VM on DigitalOcean
 Tried to keep my laptop clean so a VM was used
