@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  mysql:
+    image: mysql:5.6
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_USER: pesho
+      MYSQL_PASSWORD: peshev
+      MYSQL_ROOT_PASSWORD: gosho
+      MYSQL_DATABASE: feedback
+
