@@ -1,3 +1,19 @@
+# Task requirements (estimates as ~2h, took ~6h)
+Using recent version of Symfony framework build a REST API for Guestbook Application where people can leave their feedback about virtual restaurant.
+
+It should have 2 endpoints:
+
+- POST /feedback - should accept json object and save it to persistence layer. You can use database or maybe just a file, does not matter.
+- GET /feedback - should return the last 10 “feedback“ objects saved if they do not contain the word “test1” or “test2”
+
+There is not need for authorisation, authentication, user management.
+
+The solution must include Dockerfile.
+
+If the solution uses third party software (such as relational database, e.g. MySQL) there should be docker-compose.yaml file.
+
+Bonus points for unit and integration tests.
+
 # Running the project
 
 Running all services: `docker-compose up --build`
